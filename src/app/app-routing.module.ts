@@ -18,6 +18,30 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'edit-registo',
+    loadChildren: () => import('./edit-registo/edit-registo.module').then( m => m.EditRegistoPageModule)
+  },
+  {
+    path: 'mensagens',
+    loadChildren: () => import('./mensagens/mensagens.module').then( m => m.MensagensPageModule)
+  },
+  {
+    path: 'premium',
+    loadChildren: () => import('./premium/premium.module').then( m => m.PremiumPageModule)
+  },
+  {
+    path: 'historico',
+    loadChildren: () => import('./historico/historico.module').then( m => m.HistoricoPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
   }
 ];
 

@@ -1,0 +1,25 @@
+
+.error-message {
+  color: var(--ion-color-danger);
+}
+.go-to-register {
+  text-align: center;
+  margin-top: 20px;
+}
+.submit-btn {
+  margin-top: 40px;
+  border-radius: 15%;
+}
+
+a {
+  color: var(--ion-color-secondary);
+  &:hover {
+    cursor: pointer;
+  }
+
+  .bar .title {
+    font-size:22px;
+  }
+
+
+}

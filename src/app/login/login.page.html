@@ -1,0 +1,48 @@
+
+
+<ion-content >
+  <ion-menu [swipeGesture]="false"></ion-menu>
+  <p align="center">
+    <img src="/assets/img/logo_azul1.png" alt="" style="margin-bottom:25px; margin-top: 20px"/></p>
+
+  <form class="form" [formGroup]="validationsForm" (ngSubmit)="tryLogin(validationsForm.value)" style="margin-top: 0;padding-top: 0">
+
+      <ion-text slot="start" style="font-size: 20px" color="primary"><b>Login</b></ion-text>
+    <ion-item>
+      <ion-label color="secondary" position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validationMessages.email">
+        <div class="error-message"
+
+             *ngIf="validationsForm.get('email').hasError(validation.type) &&
+ (validationsForm.get('email').dirty
+||validationsForm.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item>
+      <ion-label position="floating" color="secondary">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validationMessages.password">
+        <div class="error-message"
+
+             *ngIf="validationsForm.get('password').hasError(validation.type) && (validationsForm.get('password').dirty ||validationsForm.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-button shape="round" color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validationsForm.valid">
+     <b> Login </b>
+    </ion-button>
+    <label class="error-message">{{errorMessage}}</label>
+  </form>
+
+  <p class="go-to-register">
+    Não tem conta? <a (click)="goRegisterPage()"><b>Registar</b></a>
+  </p>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title align="center">Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+    <div class="header">
+    </div>
+    <div class="flex">
+        <div class="box-border">
+            <div class="border-white">
+                <ion-avatar>
+                    <img src="/assets/img/av.png" alt="" width="100%">
+                </ion-avatar>
+            </div>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content>
+    <ion-text color="primary" ><h1>Resultados:</h1></ion-text>
+
+    <ion-card color="secondary">
+        <ion-card-title align="center">Software Developer</ion-card-title>
+        <ion-card-subtitle align="center">Príncipe Real, Grande Lisboa</ion-card-subtitle>
+            <ion-title align="center">Developers, Lda. </ion-title>
+        <div align="right">
+        <ion-button shape="round" color="primary" size="medium" (click)="goChat()">
+            Entrar em Contacto
+        </ion-button>
+        </div>
+    </ion-card>
+</ion-content>

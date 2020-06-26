@@ -4,7 +4,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Router} from '@angular/router';
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -20,12 +19,7 @@ export class AppComponent {
     },
     {
       title: 'Editar Registo',
-      url: '/editarregisto',
-      icon: 'create-sharp'
-    },
-    {
-      title: 'Editar Perfil',
-      url: '/editarperfil',
+      url: '/edit-registo',
       icon: 'create-sharp'
     },
     {
@@ -35,7 +29,7 @@ export class AppComponent {
     },
     {
       title: 'Comprar Premium',
-      url: '/compras',
+      url: '/premium',
       icon: 'card-sharp'
     },
     {
@@ -45,7 +39,7 @@ export class AppComponent {
     },
     {
       title: 'Definições',
-      url: '/definicoes',
+      url: '/settings',
       icon: 'settings-sharp'
     },
     {
@@ -80,4 +74,18 @@ export class AppComponent {
       this.statusBar.styleDefault();
     });
   }
+/*
+  public getUser(): User {
+    var db = firebase.database().ref();
+    
+     var email = '';
+     
+    this.afAuth.user.subscribe( user => {
+      if(user)
+        email = user.email
+    });
+    
+    db.child('user-list').orderByChild('email').equalTo(email).
+  }
+  */
 }
